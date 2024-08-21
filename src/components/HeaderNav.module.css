@@ -1,0 +1,99 @@
+.nav {
+  display: flex;
+  font-size: 1rem;
+  gap: 1.2rem;
+}
+
+.nav a {
+  font-weight: 400;
+}
+
+.nav a:global(.active) {
+  color: #fb1;
+}
+
+.navMobile {
+  display: none;
+  position: absolute;
+  top: 80px;
+  right: 10px;
+  padding: 0.4rem 1rem;
+  gap: 0.125rem;
+  justify-content: center;
+  background: white;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 -1px 2px rgba(0, 0, 0, 0.1);
+  border-radius: 0.2rem;
+}
+
+.navMobileAtivo {
+  animation: fadeIn 0.2s ease-out;
+  display: grid;
+}
+
+@keyframes fadeIn {
+  from {
+    transform: translateY(-20px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+.navMobile a {
+  padding: 0.225rem;
+  display: grid;
+  grid-template-columns: auto 24px;
+  justify-items: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.navMobile a svg {
+  margin: 0 auto;
+  width: 24px;
+  height: 24px;
+}
+
+.navMobile a:global(.active) {
+  color: #fb1;
+}
+
+.mobileBotao {
+  background-color: #eee;
+  border-radius: 0.2rem;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid transparent;
+  transition: 0.1s;
+  cursor: pointer;
+}
+
+.mobileBotao::after {
+  content: "";
+  display: block;
+  width: 1.2rem;
+  height: 2px;
+  border-radius: 2px;
+  background-color: currentColor;
+  box-shadow: 0 6px currentColor, 0 -6px currentColor;
+  transition: 0.2s;
+}
+
+.mobileBotao:focus,
+.mobileBotao:hover,
+.mobileBotaoAtivo {
+  outline: none;
+  background-color: white;
+  box-shadow: 0 0 0 3px #fea;
+  border-color: #fb1;
+  color: #fb1;
+}
+
+.mobileBotaoAtivo::after {
+  transform: rotate(90deg);
+  width: 4px;
+  height: 4px;
+  box-shadow: 0 8px currentColor, 0 -8px currentColor;
+}
