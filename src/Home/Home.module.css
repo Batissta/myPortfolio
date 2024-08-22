@@ -1,0 +1,29 @@
+.homeContainer {
+    margin: 0 auto;
+    min-height: calc(100vh - 80px);
+    max-width: 70vw;
+    padding: 120px 0 80px 0px;
+    display: flex;
+    flex-direction: column;
+}
+
+.homeContainer h1 {
+    padding-top: 60px;
+    font-size: 3rem;
+    color: #fff;
+}
+@media (width <= 630px) {
+    .homeContainer h1 {
+        font-size: 2rem;
+    }
+}
+.homeContainer span {
+    color: #b4b4b4;
+    margin-bottom: 32px;
+}
+
+.homeContainer p {
+    margin-top: 12px;
+    max-width: 70ch;
+    color: #e0e0e0;
+}
