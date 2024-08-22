@@ -1,29 +1,137 @@
-.homeContainer {
-    margin: 0 auto;
-    min-height: calc(100vh - 80px);
-    max-width: 70vw;
-    padding: 120px 0 80px 0px;
-    display: flex;
-    flex-direction: column;
+.homeContainerBg {
+    background: url("https://th.bing.com/th/id/R.37d3fc39ca6ccbe504a1e403309560e2?rik=Pait1XnC0SuMGg&pid=ImgRaw&r=0") no-repeat 100%;
+    position: relative;
 }
 
-.homeContainer h1 {
+.homeContainerBg::after {
+    content: "";
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.904);
+}
+
+.homeContainer {
+    min-height: calc(100vh - 80px);
+    max-width: 70vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    padding: 80px;
+    margin: 0 auto;
+}
+
+.homeConteudo {
+    position: relative;
+    margin-bottom: 24px;
+    z-index: 2;
+    font-family: "DM Serif Text";
+}
+
+.homeConteudo h1 {
+    font-family: "DM Serif Text";
+    font-weight: 800;
     padding-top: 60px;
     font-size: 3rem;
+    color: #ffffff;
+}
+
+.homeConteudo span {
+    font-weight: 400;
+    color: #b4b4b4;
+    max-width: fit-content;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 12px;
+    align-items: center;
+    margin-bottom: 32px;
+    font-size: 1rem;
+}
+
+.homeConteudo span svg path {
+    fill: #0f89ec;
+}
+
+.homeConteudo p {
+    font-family: "Rubik";
+    font-size: 1.2rem;
+    color: #e0e0e0;
+}
+
+.homeConteudo p:first-of-type {
+    margin-bottom: 12px;
+}
+
+.botao {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: "Rubik";
+    text-transform: uppercase;
+    color: #b4b4b4;
+    margin-top: 32px;
+}
+
+.botao svg {
+    transform: translateX(-6px);
+}
+
+.botao svg path {
+    stroke: #b4b4b4;
+}
+
+.botao:hover  {
     color: #fff;
 }
+
+.botao:hover svg {
+    transition: .2s;
+    transform: translateX(5px);
+}
+
+.botao:hover svg path {
+    stroke: #fff;
+}
+
 @media (width <= 630px) {
-    .homeContainer h1 {
+    .homeConteudo h1 {
         font-size: 2rem;
     }
 }
-.homeContainer span {
-    color: #b4b4b4;
-    margin-bottom: 32px;
+
+.tecnologiasArea {
+    position: relative;
+    z-index: 2;
+}
+.tecnologiasArea div {
+    padding: 6px 12px;
+    background-color: #ffffff38;
+    border: 1px solid white;
+    border-radius: 18px;
+    max-width: fit-content;
+    justify-content: start;
+    display: flex;
+    gap: .5rem;
 }
 
-.homeContainer p {
-    margin-top: 12px;
-    max-width: 70ch;
-    color: #e0e0e0;
+.tecnologiasArea div:hover {
+    scale: 1.02;
+    background-color: #ffffff17;
+}
+
+.tecnologiasArea div svg {
+    width: 28px;
+    height: 28px;
+}
+
+.tecnologiasArea span {
+    color: #b4b4b4;
+    cursor: default;
+    display: block;
+    font-size: 1.125rem;
+    margin-bottom: 12px;
+    padding-left: 8px;
 }
