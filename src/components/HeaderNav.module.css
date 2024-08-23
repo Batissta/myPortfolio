@@ -2,20 +2,22 @@
   display: flex;
   font-size: 1rem;
   gap: 1.2rem;
+  font-family: "Archivo";
 }
 
 .nav a {
- color: #6d6d6d;
+  color: #6d6d6d;
   font-weight: 400;
 }
 
 .nav a:global(.active) {
-  color: #121212;
+  color: #ffffff;
 }
 
 .navMobile {
   display: none;
   position: absolute;
+  z-index: 99;
   top: 80px;
   right: 10px;
   padding: 0.4rem 1rem;
@@ -45,20 +47,21 @@
 }
 
 .navMobile a:global(.active) {
-  color: #fb1;
+  color: #0f89ec;
 }
 
 .mobileBotao {
-  background-color: #eee;
+  background-color: transparent;
   border-radius: 0.2rem;
   height: 40px;
   width: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid transparent;
+  border: 1px solid #eeeeee48;
   transition: 0.1s;
   cursor: pointer;
+  color: #eee;
 }
 
 .mobileBotao::after {
@@ -76,10 +79,7 @@
 .mobileBotao:hover,
 .mobileBotaoAtivo {
   outline: none;
-  background-color: white;
-  box-shadow: 0 0 0 3px #fea;
-  border-color: #fb1;
-  color: #fb1;
+  border-color: #0f89ec;
 }
 
 .mobileBotaoAtivo::after {
@@ -89,12 +89,18 @@
   box-shadow: 0 8px currentColor, 0 -8px currentColor;
 }
 
-
 @keyframes fadeIn {
   from {
     transform: translateY(-20px);
   }
   to {
     transform: translateY(0px);
+  }
+}
+
+@media (width <= 400px) {
+  .mobileBotao {
+    height: 32px;
+    width: 32px;
   }
 }
