@@ -21,10 +21,7 @@ const HomeIntroducao = () => {
             <span className="cor0f89ec">Design</span> e{" "}
             <span className="cor0f89ec">performance.</span>
           </h1>
-          <p>
-            Sou um desenvolvedor Frontend localizado em Campina Grande, Paraíba.
-            📍
-          </p>
+          <p>Desenvolvedor Frontend.</p>
           <p>
             Minha abordagem é focada na criação de experiências de usuário
             envolventes e funcionais. Cada projeto que desenvolvo é uma

@@ -1,0 +1,42 @@
+.homeSobre {
+  padding-top: 120px;
+  background-color: #111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #eee;
+}
+
+.homeSobre h1 {
+  font-family: "Archivo";
+  font-weight: 400;
+}
+
+.conteudo {
+  position: relative;
+  z-index: 1;
+  background-color: #1b1b1b;
+  min-height: 500px;
+  width: 60vw;
+  border: 2px solid #eee;
+  font-family: "Archivo";
+  font-weight: 300;
+}
+
+.conteudo h3 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.conteudo p {
+  font-weight: 200;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.bandeiraSvg {
+  fill: rgb(13, 156, 0);
+  width: 24px;
+  height: 24px;
+}

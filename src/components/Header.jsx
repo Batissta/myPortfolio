@@ -1,11 +1,14 @@
 import React from "react";
 import styles from "./Header.module.css";
 import HeaderNav from "./HeaderNav.jsx";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
     <header className={styles.header}>
-      <h1>My Portfolio</h1>
+      <Link to={"/"}>
+        <h1>Portfólio</h1>
+      </Link>
       <HeaderNav />
     </header>
   );

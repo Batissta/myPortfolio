@@ -1,8 +1,9 @@
 import React from "react";
 
-const ReactSvg = () => {
+const ReactSvg = (props) => {
   return (
     <svg
+      {...props}
       width="32px"
       height="32px"
       viewBox="0 0 24 24"

@@ -50,3 +50,24 @@ ul {
 .cor0f89ec {
   color: #0f89ec;
 }
+.ovHidden {
+  overflow: hidden;
+  position: relative;
+}
+.reactPic {
+  position: absolute;
+  z-index: 1;
+  width: 900px;
+  height: 900px;
+  top: -23.5vh;
+  right: -29.5vw;
+}
+
+@media (width <= 1000px) {
+  .reactPic {
+    width: 450px;
+    height: 450px;
+    top: 50vh;
+    right: -225px;
+  }
+}
